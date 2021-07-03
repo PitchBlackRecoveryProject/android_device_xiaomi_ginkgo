@@ -116,6 +116,8 @@ TW_EXTRA_LANGUAGES := true
 TW_INCLUDE_NTFS_3G := true
 TW_FORCE_USE_BUSYBOX := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
+TARGET_USE_CUSTOM_LUN_FILE_PATH := "/config/usb_gadget/g1/functions/mass_storage.0/lun.%d/file"
+TW_CUSTOM_CPU_TEMP_PATH := "/sys/devices/virtual/thermal/thermal_zone4/temp"
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
 TW_MAX_BRIGHTNESS := 2047
 TW_DEFAULT_BRIGHTNESS := 1200
@@ -127,6 +129,7 @@ TARGET_USES_LOGD := true
 TARGET_USES_MKE2FS := true
 TW_EXCLUDE_TWRPAPP := true
 TW_NO_SCREEN_TIMEOUT := true
+TW_EXCLUDE_TZDATA := true
 
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
