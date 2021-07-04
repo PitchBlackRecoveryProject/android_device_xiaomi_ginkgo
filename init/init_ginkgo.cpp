@@ -49,7 +49,9 @@ void vendor_load_properties() {
     property_set("ro.bootimage.build.date.utc", "1546335651");
     property_set("ro.build.date.utc", "1546335651");
     std::string device_region = android::base::GetProperty("ro.boot.hwc", "");
-    if (device_region == "Global_B")
+    std::string device_hwversion = android::base::GetProperty("ro.boot.hwversion", "");
+    if (device_region == "Global_B" && (device_hwversion == "18.31.0" || 
+        device_hwversion == "18.39.0" || device_hwversion == "19.39.0"))
     {
         load_properties("willow");
     }
